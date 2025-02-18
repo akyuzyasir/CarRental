@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarRental.Persistence.Context;
 
-public class CarBookContext : DbContext
+public class CarRentalContext : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server = AKS\\SQLEXPRESS; Database=CarRental; Trusted_Connection=True; Encrypt = True; TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer("Server = AKS\\SQLEXPRESS; initial Catalog=CarRental; integrated Security=true; Trusted_Connection=True; Encrypt = True; TrustServerCertificate=True");
     }
     public DbSet<About> Abouts { get; set; }
     public DbSet<Banner> Banners { get; set; }
