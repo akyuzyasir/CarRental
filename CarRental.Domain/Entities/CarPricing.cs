@@ -2,6 +2,7 @@
 
 public class CarPricing
 {
+    public int CarPricingID { get; set; }
     public decimal Amount { get; set; }
 
     // Nav Props
